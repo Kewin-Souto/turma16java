@@ -1,6 +1,6 @@
 package java0;
 
-public class Java0 {
+public class Exconversao {
 	
 public static void main(String []args) {
 	

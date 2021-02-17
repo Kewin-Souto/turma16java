@@ -1,4 +1,3 @@
+alter table tb_classe
+add column resoluto varchar(30);
 
-update alunos
-set nota = 9
-where id= 5;

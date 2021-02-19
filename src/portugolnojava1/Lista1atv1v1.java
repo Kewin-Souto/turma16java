@@ -2,49 +2,33 @@ package portugolnojava1;
 
 import java.util.Scanner;
 
-public class Listaatv1 {
+public class Lista1atv1v1 {
 
-	/*1. Faça um sistema que leia a idade de uma pessoa expressa em anos,
-	 *  meses e dias e mostre-a expressa apenas em dias. 
-	 * 
-	 */
-
-	public static void main(String[] args) {
-		Scanner leia = new Scanner(System.in);
+	public static void main ( String[]args) {
 		
-		int anos , dias, meses, totalDias;
-
+		/*1. Faça um sistema que leia a idade de uma pessoa expressa em anos,
+		 *  meses e dias e mostre-a expressa apenas em dias. */
 		
+		final short DIAS_NO_ANO = 365;
+		final short DIAS_NO_MES = 30;
+		short dias;
+		short meses;
+		short anos;
+		Scanner leitor = new Scanner(System.in);
 		
-		System.out.println("Quantos anos você tem?");
-		anos = leia.nextInt();
-		 
-		 System.out.println("E quantos meses?");
-		meses = leia.nextInt();
+		System.out.println("Informe a sua idade.");
+		System.out.print("Anos: ");
+		anos = leitor.nextShort();
 		
+		System.out.print("Meses: ");
+		meses = leitor.nextShort();
 		
-		 System.out.printf("Sua idade em dias é " + totalDias);
+		System.out.print("Dias: ");
+		dias = leitor.nextShort();
 		
-		 anos = (totalDias * 365);
-		meses = (totalDias % 365) *30;
-		dias = (totalDias % 365) %30;
-				 //totalDias = idadeAno * 365 + meses * 30 + dias;
-		 /*
-		  * 3 % 2 = 1
-		  * 1 ano
-		  * 1 mes 396 dias totais      
-		  * 1 dia
-		  * 
-		  * totalDias % 365 = sobraDosMeses
-		  * sobraDosMeses % 30 = dias
-		  * 
-		  * anos * 365
-		  * meses * 30
-		  * 
-		  * 
-		  * 
-		  */
+		dias += (anos * DIAS_NO_ANO) + (meses * DIAS_NO_MES);
 		
+		System.out.println("\n\nA sua idade em dias é " + dias);
 	}
-
 }
+		
